@@ -2,13 +2,13 @@ import React from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import { useState } from "react";
+
 
 function App() {
  ;
 
     const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
-    const { transcript, browserSupportsSpeechRecognition, resetTranscript } = useSpeechRecognition();
+    const { browserSupportsSpeechRecognition, resetTranscript } = useSpeechRecognition();
 
     if (!browserSupportsSpeechRecognition) {
         return null;

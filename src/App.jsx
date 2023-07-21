@@ -11,7 +11,7 @@ function App(){
     const [isCopied, setCopied] = useClipboard(textToCopy, {
         successDuration:1000
     });
-    const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'bn-IN' });
+    const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
     const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
 
     if (!browserSupportsSpeechRecognition) {

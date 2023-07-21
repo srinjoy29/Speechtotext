@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Speechtotext/static/js/main.a542def2.js",
+    "main.js": "/Speechtotext/static/js/main.492d54db.js",
     "index.html": "/Speechtotext/index.html",
-    "main.a542def2.js.map": "/Speechtotext/static/js/main.a542def2.js.map"
+    "main.492d54db.js.map": "/Speechtotext/static/js/main.492d54db.js.map"
   },
   "entrypoints": [
-    "static/js/main.a542def2.js"
+    "static/js/main.492d54db.js"
   ]
 }

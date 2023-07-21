@@ -6,9 +6,18 @@ import Footer from "./Footer.jsx";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 function App() {
+    const commands = [
+        {
+            command:'open *',
+            callback:(site)=>{
+                window.open('http://' +site)
+            }
+    
+        }
+        ]
     const [clearText, setClearText] = useState(false);
     const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
-    const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+    const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition({commands});
 
     if (!browserSupportsSpeechRecognition) {
         return null;
@@ -21,6 +30,7 @@ function App() {
     const clearTranscript = () => {
         setClearText(true);
     };
+   
 
     return (
         <div>
